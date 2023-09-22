@@ -1,6 +1,4 @@
-import React from "react";
-
-function Table({ data }) {
+const Table = ({ data }) => {
   return (
     <table>
       <tbody>
@@ -10,7 +8,7 @@ function Table({ data }) {
           <th>Email</th>
         </tr>
         {data.map((item) => (
-          <tr>
+          <tr key={item.id}>
             <td>{item.first_name}</td>
             <td>{item.last_name}</td>
             <td>{item.email}</td>
@@ -19,6 +17,6 @@ function Table({ data }) {
       </tbody>
     </table>
   );
-}
+};
 
 export default Table;
